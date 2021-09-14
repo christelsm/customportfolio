@@ -20,8 +20,9 @@
 
 /* #TYPOGRAPHY  */
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Josefin Sans, Helvetica, Arial, sans-serif;
     color: rgba(0,0,0,.7);
+    background-color: #f7f5f2;
     max-width: 1000px;
     margin: 0 auto;
     padding: 1em;
@@ -29,13 +30,28 @@ body {
     line-height: 1.5em;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.p-center {
+    margin: auto;
+    max-width: 35em;
+}
+
 h1 {
+    font-family: Fino Sans, Josefin Sans, Helvetica, Arial;
     font-size: 3em;
+    color: #000000;
 }
 
 /* #LINKS */
 a {
-  color: rgba(0,0,0,.4);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -53,6 +69,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.shadow {
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
+    min-height: 200px;
+    width: 50vw;
+    margin: 100px auto;
+    background: white;
+    border-radius: 5px;
+}
+
+
 
 /* SITE-STRUCTURE */
 
@@ -84,7 +118,7 @@ img {
 .site-navigation a {
     display: block;
     padding: 1em .5em;
-    color: rgba(0,0,0,.4);
+    color: rgb(0, 0, 0);
 }
 
 .site-navigation a:hover,
@@ -120,10 +154,11 @@ section {
   .thumbgrid a img {
       filter: brightness(1.05);
       transition: all ease-in-out 0.2s;
-      border: 1px solid rgba(255,255,255,0);
+      border: 1px solid rgba(0, 0, 0, 0); 
   }
   
   .thumbgrid a:hover img {
       filter: brightness(1);
-      border: 1px solid rgba(0,0,0,.3);
+      border: 1px solid #ffffff;
   }
+
