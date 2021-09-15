@@ -20,7 +20,7 @@
 
 /* #TYPOGRAPHY  */
 body {
-    font-family: Josefin Sans, Helvetica, Arial, sans-serif;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
     color: rgba(0,0,0,.7);
     background-color: #f7f5f2;
     max-width: 1000px;
@@ -31,6 +31,7 @@ body {
 }
 
 p {
+    max-width: 35em;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -48,6 +49,31 @@ h1 {
     font-size: 3em;
     color: #000000;
 }
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+div {
+    display: block;
+}
+
 
 /* #LINKS */
 a {
@@ -86,6 +112,27 @@ img {
     border-radius: 5px;
 }
 
+/*BUTTONS*/
+.button {
+    display: inline-block;
+    border-radius: 2em;
+    padding: 1em 2em;
+    margin: 1em;
+    border: 1px solid rgba(0,0,0,.7);
+    color: rgba(0,0,0,.7);
+    /* transition: all .4s ease-out; */
+}
+
+/*LINKS*/
+a {
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
 /* SITE-STRUCTURE */
@@ -128,8 +175,10 @@ img {
 }
 
 section {
-    padding: 0 0 3em 0;
+    padding: 10% 2em;
+    display: block;
 }
+
 
 /* #LAYOUT: THUMB IMAGE GRID */
 .thumbgrid {
@@ -161,4 +210,171 @@ section {
       filter: brightness(1);
       border: 1px solid #ffffff;
   }
+
+/* FULL-WIDTH HELPER */
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  .full-width img {
+    width: 100%;
+  }
+
+  /*SECTIONS*/
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  
+
+.subheadline {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    color: rgba(0,0,0,.5);
+  }
+
+
+  
+  /* HERO SECTIONS */
+  .hero {
+      padding: 4em 0;
+      background: transparent;
+  }
+  
+  
+  /* #LAYOUT: FLEX GRID */
+  @media (min-width: 768px) {
+      
+      .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1em;
+      }
+      .one-third.column {
+          width: 32%;
+      }
+      .two-thirds.column {
+          width: 60%;
+      }
+      .col-imagesmaller .container {
+        display: flex;
+        align-items: flex-start;
+      }
+      .col-imagesmaller .subcontent-image {
+        width: 33.3333%;
+    }
+    .col-imagesmaller .subcontent-text {
+        width: 66.6666%;
+    }
+    .flippit .container {
+        flex-direction: row-reverse;
+    }
+   
+      
+  }
+
+
+
+  /* Page Fade-ins */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  main,
+  fade-in {
+    opacity: 0;
+    animation: fade-in ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade-and-move-in {
+    from {
+      transform: translate(0, -20px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-and-move-in * {
+    opacity: 0;
+    animation: fade-and-move-in ease-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+  }
+  
+  .fade-and-move-in *:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .fade-and-move-in *:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .fade-and-move-in *:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .fade-and-move-in *:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+  .fade-and-move-in *:nth-child(5) {
+    animation-delay: 1s;
+  }
+  .fade-and-move-in *:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+  .fade-and-move-in *:nth-child(7) {
+    animation-delay: 1.4s;
+  }
+  .fade-and-move-in *:nth-child(8) {
+    animation-delay: 1.6s;
+  }
+  .fade-and-move-in *:nth-child(9) {
+    animation-delay: 1.8s;
+  }
+
+
+  /* SUBPAGE CONTENT */
+  .white {
+    background: #ffffff;
+  }
+  .subcontent-text {
+    padding: 2em;
+  }
+  .subcontent-text h3 {
+    font-size: 1.75em;
+  }
+  .meta-text, .meta-list {
+    padding: 2em;
+  }
+  .meta-text h3 {
+    border-top: 1px solid rgba(0,0,0,.3);
+    padding-top: 2em;
+  }
+  .meta-info .meta-list {
+    columns: 2;
+  }
+  .meta-list {
+    list-style: none;
+  }
+  .meta-text, .meta-list {
+    padding: 2em;
+  }
+
+
+
 
