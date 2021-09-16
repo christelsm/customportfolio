@@ -30,6 +30,7 @@ body {
     line-height: 1.5em;
 }
 
+
 p {
     max-width: 35em;
     display: block;
@@ -67,7 +68,6 @@ h3 {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
 }
 
 div {
@@ -92,6 +92,11 @@ a:hover {
 
 /* #IMAGES */
 img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.scale-with-grid {
   max-width: 100%;
   height: auto;
 }
@@ -244,11 +249,28 @@ section {
 
   
   /* HERO SECTIONS */
+
   .hero {
-      padding: 4em 0;
-      background: transparent;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    padding: 0;
   }
-  
+  .hero {
+    background: #ffffff77;
+    border-top: none;
+    padding: 4em 1em 3em 1em;
+    margin-bottom: 1.5em;
+  }
+  .hero img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+
+
   
   /* #LAYOUT: FLEX GRID */
   @media (min-width: 768px) {
