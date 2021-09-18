@@ -44,6 +44,11 @@ p {
     max-width: 35em;
 }
 
+.projectinfo p {
+  text-align: left;
+  margin-right: auto;
+}
+
 h1 {
     font-family: Josefin Sans, Helvetica, Arial;
     font-size: 3em;
@@ -112,21 +117,6 @@ img.scale-with-grid {
   column-gap: 1em;
 }
 
-.shadow {
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
-    ;
-    min-height: 200px;
-    width: 50vw;
-    margin: 100px auto;
-    background: white;
-    border-radius: 5px;
-}
 
 /*BUTTONS*/
 .button {
@@ -268,7 +258,7 @@ section {
     padding: 0;
   }
   .hero {
-    background: #ffffff;
+    background:transparent;
     border-top: none;
     padding: 4em 1em 3em 1em;
     margin-bottom: 1.5em;
@@ -286,7 +276,9 @@ section {
   
   /* #LAYOUT: FLEX GRID */
   @media (min-width: 768px) {
-      
+    .projectinfo p {
+      columns: 2;
+  }
       .row {
           display: flex;
           justify-content: space-between;
