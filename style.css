@@ -104,6 +104,14 @@ img.scale-with-grid {
   column-count: 2;
 }
 
+.grid-image-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-count: 2;
+  column-gap: 1em;
+}
+
 .shadow {
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
