@@ -72,6 +72,7 @@ h3 {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    line-height: 1.55em;
 }
 
 div {
@@ -108,6 +109,14 @@ img.scale-with-grid {
 .portimages {
   column-count: 2;
 }
+
+.avatar {
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
 
 .grid-image-container {
   margin: 0;
