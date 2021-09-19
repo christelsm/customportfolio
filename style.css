@@ -21,7 +21,7 @@
 /* #TYPOGRAPHY  */
 body {
     font-family: Raleway, Helvetica, Arial, sans-serif;
-    color: rgba(0,0,0,.7);
+    color: rgb(0, 0, 0);
     background-color: #f7f5f2;
     margin: 0 auto;
     padding: 0;
@@ -259,9 +259,6 @@ section {
   }
   .hero {
     background:transparent;
-    border-top: none;
-    padding: 4em 1em 3em 1em;
-    margin-bottom: 1.5em;
   }
   .hero img {
     position: absolute;
@@ -376,7 +373,7 @@ section {
 
   /* SUBPAGE CONTENT */
   .white {
-    background: #ffffff;
+    background: #ffffff60;
   }
   .subcontent-text {
     padding: 2em;
